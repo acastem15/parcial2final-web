@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "91ede370-c3f6-4f95-b0bc-339b759f7a79",
+		"name": "Estudiantes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45073515"
+	},
+	"item": [
+		{
+			"name": "Create estudiante",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Carol\", \r\n     \"numeroCedula\":5324534,\r\n    \"correo\":\"a@email.com\",\r\n    \"programa\":\"fisica\",\r\n    \"semestre\":5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/estudiantes",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"estudiantes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/estudiantes/{{idEstudiante}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"estudiantes",
+						"{{idEstudiante}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InscripcionActividad",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/estudiantes/{{idEstudiante}}/actividades/{{idActividad}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"estudiantes",
+						"{{idEstudiante}}",
+						"actividades",
+						"{{idActividad}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

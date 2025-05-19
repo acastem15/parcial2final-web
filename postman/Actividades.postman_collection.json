@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "f2ebbc60-471c-415a-82df-279469c80244",
+		"name": "Actividades",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45073515"
+	},
+	"item": [
+		{
+			"name": "Create actividad",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\":\"My actividad\", \r\n    \"fecha\":\"12/05/2022\",\r\n    \"cupoMaximo\":5,\r\n    \"estado\":0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/actividades",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"actividades"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CambiarEstado",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/actividades/{{id}}/{{estado}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"actividades",
+						"{{id}}",
+						"{{estado}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindByDate",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/actividades/{{fecha}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"actividades",
+						"{{fecha}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

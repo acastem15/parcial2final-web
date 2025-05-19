@@ -1,0 +1,35 @@
+{
+	"info": {
+		"_postman_id": "e12324a8-4deb-460d-a1c2-77d59a14f48c",
+		"name": "Reseñas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45073515"
+	},
+	"item": [
+		{
+			"name": "AgregarReseña",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/reseñas",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"reseñas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findByID",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
